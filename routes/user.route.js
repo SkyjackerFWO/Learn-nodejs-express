@@ -11,7 +11,7 @@ router.get('/cookie', (req,res,next)=>{
     res.send('Hello');
 })
 
-router.get('/search', controller.search);
+router.get('/search',controller.search);
 
 router.get('/create',controller.create);
 

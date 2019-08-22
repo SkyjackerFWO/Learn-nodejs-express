@@ -3,6 +3,10 @@ const bodyParser = require('body-parser');
 const cookieParser = require('cookie-parser');
 
 const userRoute = require('./routes/user.route');
+const authRoute = require('./routes/auth.route');
+
+const authMiddlewres = require('./middlewares/auth.middlewares')
+
 
 const port = 3000;
 const app = express();
@@ -11,8 +15,8 @@ app.set('views', './views');
 
 app.use(bodyParser.json()) // for parsing application/json
 app.use(bodyParser.urlencoded({ extended: true })) // for parsing application/x-www-form-urlencoded
-app.use(express.static('public'))
 app.use(cookieParser())
+app.use(express.static('public'))
 
 //routes
 app.get('/', (req, res) => {
@@ -20,7 +24,8 @@ app.get('/', (req, res) => {
         name : 'AAA'
     });
 });
-app.use('/users', userRoute);
+app.use('/users',authMiddlewres.requierAuth ,userRoute);
+app.use('/auth',authRoute);
 
 app.listen(port, () => {
     console.log('Server running on post ' + port)
