@@ -18,7 +18,8 @@ module.exports.search = (req,res) => {
 };
 
 module.exports.create = (req,res)=>{
-    res.render('users/create')
+    console.log(req.cookies);
+    res.render('users/create');
 };
 
 module.exports.get = (req,res)=>{
