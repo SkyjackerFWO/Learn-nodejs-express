@@ -6,6 +6,7 @@ const cookieParser = require('cookie-parser');
 
 const userRoute = require('./routes/user.route');
 const authRoute = require('./routes/auth.route');
+const productsRoute = require('./routes/product.route');
 
 const authMiddlewres = require('./middlewares/auth.middlewares')
 
@@ -28,6 +29,7 @@ app.get('/', (req, res) => {
 });
 app.use('/users',authMiddlewres.requierAuth ,userRoute);
 app.use('/auth',authRoute);
+app.use('/products',productsRoute);
 
 app.listen(port, () => {
     console.log('Server running on post ' + port)

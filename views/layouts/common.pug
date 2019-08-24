@@ -12,7 +12,9 @@ html
       a.navbar-brand.ml-2(href='/')
         img(src="/img/logo.jpg", style ="height:35px", class="mb-1 mr-1")
         span(style="font-weight:bold") CoderTokyo
-      button.navbar-toggler(type='button', data-toggle='collapse', data-target='#navbarNav', aria-controls='navbarNav', aria-expanded='false', aria-label='Toggle navigation')
+      button.navbar-toggler(type='button', data-toggle='collapse', 
+      data-target='#navbarNav', aria-controls='navbarNav', aria-expanded='false',
+      aria-label='Toggle navigation')
         span.navbar-toggler-icon
       #navbarNav.collapse.navbar-collapse
         ul.navbar-nav
@@ -22,6 +24,7 @@ html
           li.nav-item
             a.nav-link(href='/users') Users
       if user
-        p= user.name      
+        p= user.name   
+             
     .container.pl-5
       block Content
