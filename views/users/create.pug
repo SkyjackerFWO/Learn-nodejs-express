@@ -7,7 +7,7 @@ block Content
         each error in errors
             .alert.alert-warning(role='alert')= error
 
-    form(action = "/users/create" , method = "POST")
+    form(action = "/users/create" , method = "POST", enctype = "multipart/form-data")
         .form-group
             label(for='exampleInputName') Name
             input#exampleInputName.form-control(type='text',name= "name" , placeholder='Enter your name', value=values ?
@@ -16,4 +16,7 @@ block Content
             label(for='exampleInputPhone') Phone number
             input#exampleInputPhone.form-control(type='interger',name= "phone", placeholder='Your phone number', class="mb-2",value=values ?
             values.phone : "")
+        .form-group
+            label(for='exampleInputAvatar') Avatar
+            input#exampleInputAvatar.form-control-file(type='file',name ="avatar")
         button.btn.btn-primary(type='submit') Submit
