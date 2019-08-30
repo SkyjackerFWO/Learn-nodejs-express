@@ -7,7 +7,7 @@ module.exports.index = (req,res) =>{
     let start = (page - 1)*perPage;
     let end = page*perPage;
 
-    res.render('product/views',{
+    res.render('products/views',{
         products:db.get('products').value().slice(start, end)
     });
 };

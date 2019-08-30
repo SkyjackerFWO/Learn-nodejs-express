@@ -640,5 +640,16 @@
       "img": "https://scontent.fhan2-2.fna.fbcdn.net/v/t1.0-9/68948067_527259074679468_7994422876600008704_n.jpg?_nc_cat=102&_nc_oc=AQn_USd28rnxZvJq289a-_emmVwjWwea6C8VHyL_XIhcOso0aWOS5h3lgBf945O1VKlX_T_1GGSOwzNFjzT3_xFX&_nc_ht=scontent.fhan2-2.fna&oh=656b71d50ae8ab9e234e0be71a07f622&oe=5E0A9667",
       "description": "fusce congue diam id ornare imperdiet sapien urna pretium nisl ut volutpat"
     }
+  ],
+  "sessions": [
+    {
+      "id": "ZHlf6qJtb",
+      "cart": {
+        "26d2325e-72f2-4a31-92ce-dbc0f6ffa9ab": 3,
+        "c6c9b292-48ca-4a71-9fa8-62231055ed29": 1,
+        "92daca84-7417-45d5-b556-c98b035bd742": 1,
+        "760be56f-85e3-4a2e-8aee-dd551f0aca17": 1
+      }
+    }
   ]
 }
